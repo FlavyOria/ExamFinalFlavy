@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <title>Document</title>
+</head>
+<body>
+    <fieldset class="Coordonnées">
+        <legend>Vos coordonnées</legend><!--Partie 1 -->
+        <form action="Inscription" method="post" id="form"> 
+            <label for="nom">Nom :</label>
+            <input type="text" id="nom" name="nom" placeholder="Votre nom" required><br><br>
+    
+            <label for="prenom">Prénom :</label>
+            <input type="text" id="prenom" name="prenom" placeholder="Votre prenom" required><br><br>
+    
+            <label for="date_naissance">Date de naissance :</label>
+            <input type="date" id="date_naissance" name="date_naissance" required><br><br>
+    
+            <label for="mail">Adresse e-mail :</label>
+            <input type="mail" id="mail" name="mail" placeholder="abc@domain.com" required><br><br>
+
+            <label for="site">Votre site :</label>
+            <input type="text" id="site" name="site" placeholder="Votre site" required><br><br>
+
+            <label for="mdp">Mots de passe :</label>
+            <input type="password" id="mdp" name="mdp" minlenght="8" maxlenght="8" required required placeholder="Votre mots de passe"><br><br>
+
+            <label for="genre">Genre:</label>
+                <input type="radio" name="gender" value="male" required> Homme
+                <input type="radio" name="gender" value="female"> Femme
+            <br><br></label>
+
+            <label for="pays">Pays :</label>
+            <select id="pays" name="pays">
+                <option value="">Votre pays</option>
+                <optgroup label="Afrique">
+                    <option value="Tunisie">Tunisie</option>
+                    <option value="Algerie">Algérie</option>
+                    <option value="Maroc">Maroc</option>
+                    <option value="Mauritanie">Mauritanie</option>
+                </optgroup>
+                <optgroup label="Europe">
+                    <option value="France">France</option>
+                    <option value="Belgique">Belgique</option>
+                    <option value="Italie">Italie</option>
+                    <option value="Allemagne">Allemagne</option>
+                </optgroup>
+                <optgroup label="Amérique">
+                    <option value="Canada">Canada</option>
+                    <option value="Argentine">Argentine</option>
+                </optgroup>
+                <optgroup label="Autres">
+                    <option value="Europerope">Europerope</option>
+                    <option value="Asie">Asie</option>
+                    <option value="Ameriques">Amériques</option>
+                    <option value="Aceanie">Océanie</option>
+                </optgroup>
+            </select>   
+        </fieldset>
+        <br>
+        <form>
+            <fieldset>
+                <legend>Vos formations</legend><!--Partie 2 -->
+    
+                <label>
+                    <input type="checkbox" name="FormationHtml5" value="HTML5"> Formation en HTML5
+                </label><br>
+    
+                <label>
+                    <input type="checkbox" name="formationCss3" value="CSS3"> Formation en CSS3
+                </label><br>
+    
+                <label>
+                    <input type="checkbox" name="formationJs" value="JS"> Formation en JS
+                </label><br>
+    
+                <label for="formationJs"></label>
+                <textarea id="formationJs" name="formationJs" placeholder="Decrivez vos besoins en formation"rows="5" cols="50"></textarea><br>
+            </fieldset><br>
+            <fieldset>
+                <legend>Envoyer nous votre photo</legend> <!--Partie 3 -->
+                <label for="file"></label>
+                <input type="file" id="file" name="file" accept=".jpeg, .png, .pdf,"required><br><br>
+            
+                <input type="reset" value="Supprimer">
+                <input type="submit" value="Envoyer">     
+        </fieldset>
+        </form>
+        <script type="module" src="inscription.js"></script> <!--Connection avec JS -->
+    </body>
+    </html>
